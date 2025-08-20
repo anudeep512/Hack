@@ -188,7 +188,7 @@ curl --request POST \
   --data "$PAYLOAD" \
   --url "https://gitlab.example.com/api/v4/projects/1/repository/commits"
 
-Manipulating Repository files:
+## Repository files:
 
 Ref for Repository files: https://docs.gitlab.com/api/repository_files/
 
