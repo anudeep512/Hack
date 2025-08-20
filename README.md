@@ -1,8 +1,7 @@
 # Hack
-HACKATHON
 
-URL-encoded path of the project: including its namespace
-For all the below use cases refer to attached link before writing the spec:
+URL-encoded path of the project: including its namespace.
+For all the below use cases refer to attached link before writing the spec.
 
 ## Project:
 
