@@ -190,7 +190,7 @@ curl --request POST \
 
 ## Repository files:
 
-Ref for Repository files: https://docs.gitlab.com/api/repository_files/
+Ref: https://docs.gitlab.com/api/repository_files/
 
 b) Get a file from repository: Returns the Data of the file in base64 encoding
 GET /projects/:id/repository/files/:file_path
