@@ -101,13 +101,13 @@ GET /projects/:id/repository/branches/:branch
 curl --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/5/repository/branches/<url_encoding>“
 
-c) Create repository branch: Returns Metadata JSON of the branch created
+C) Create repository branch: Returns Metadata JSON of the branch created
 POST /projects/:id/repository/branches
 curl --request POST \
   --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/5/repository/branches?branch=newbranch&ref=main"
 
-d) Delete Repo branch: 
+D) Delete Repo branch: 
 DELETE /projects/:id/repository/branches/:branch
 curl --request DELETE \
   --header "PRIVATE-TOKEN: <your_access_token>" \
@@ -191,26 +191,26 @@ curl --request POST \
 
 Ref: https://docs.gitlab.com/api/repository_files/
 
-b) Get a file from repository: Returns the Data of the file in base64 encoding
+A) Get a file from repository: Returns the Data of the file in base64 encoding
 GET /projects/:id/repository/files/:file_path
 curl --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/app%2Fmodels%2Fkey%2Erb?ref=main"
 
-C) For just getting Metadata from the file: Returns only the metadata of the file
+B) For just getting Metadata from the file: Returns only the metadata of the file
 HEAD /projects/:id/repository/files/:file_path
 curl --head --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/app%2Fmodels%2Fkey%2Erb?ref=main"
 
-d) Git blame on a file: Returns blame information. Each blame range contains lines and their corresponding commit information.
+C) Git blame on a file: Returns blame information. Each blame range contains lines and their corresponding commit information.
 GET /projects/:id/repository/files/:file_path/blame
 curl --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/path%2Fto%2Ffile.rb/blame?ref=main"
 
-E) Git Blame on file with range: Returns list of commits for between specified line numbers
+D) Git Blame on file with range: Returns list of commits for between specified line numbers
 curl --head --header "PRIVATE-TOKEN: <your_access_token>" \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/path%2Fto%2Ffile.rb/blame?ref=main&range[start]=1&range[end]=2"
 
-F) Creating a new file in the Repo: 
+E) Creating a new file in the Repo: 
 POST /projects/:id/repository/files/:file_path
 curl --request POST \
   --header 'PRIVATE-TOKEN: <your_access_token>' \
@@ -219,7 +219,7 @@ curl --request POST \
             "content": "some content", "commit_message": "create a new file"}' \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/app%2Fproject%2Erb"
 
-G) Update existing file in repository: Returns some data abt the file
+F) Update existing file in repository: Returns some data abt the file
 PUT /projects/:id/repository/files/:file_path
 curl --request PUT \
   --header 'PRIVATE-TOKEN: <your_access_token>' \
@@ -228,7 +228,7 @@ curl --request PUT \
        "content": "some content", "commit_message": "update file"}' \
   --url "https://gitlab.example.com/api/v4/projects/13083/repository/files/app%2Fproject%2Erb"
 
-H) Delete existing file in repo: 
+G) Delete existing file in repo: 
 DELETE /projects/:id/repository/files/:file_path
 curl --request DELETE \
   --header 'PRIVATE-TOKEN: <your_access_token>' \
